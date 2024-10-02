@@ -6,7 +6,7 @@ import GitHub from "@/assets/github.svg";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center w-full py-2 space-x-12 whitespace-nowrap pt-4">
+    <div className="flex justify-between items-center w-full py-2 space-x-12 whitespace-nowrap pt-4 xl:px-24">
       <Image
         src={Logo}
         alt="ZKvot Logo"

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const TheSolution: React.FC = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.7 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.7 });
 
   const ballVariants = {
     hidden: { scale: 0.5, opacity: 0 },

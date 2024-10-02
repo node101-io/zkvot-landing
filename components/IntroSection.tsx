@@ -9,7 +9,7 @@ const IntroSection = () => {
   const t = useTranslations("IntroSection");
 
   return (
-    <div className="h-[95vh] w-full flex flex-col justify-center items-center text-center text-white px-4">
+    <div className="h-[95vh] w-full flex flex-col justify-center items-center text-center text-white px-4 ">
       <h1 className=" pb-4 text-[24px] text-highlight">Available Soon</h1>
       <div className="max-w-[850px]">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] mb-2 leading-tight">

@@ -13,7 +13,7 @@ export default function Home() {
         <IntroSection />
       </div>
       <TheChallenge />
-      <div className="px-4 md:px-24">
+      <div className="px-4 xl:px-24">
         <TheSolution />
         <ZKProofSection />
         <Sequencing />
