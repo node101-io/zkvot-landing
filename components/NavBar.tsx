@@ -2,26 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.svg";
-import Plus from "@/assets/plus.svg";
+import GitHub from "@/assets/github.svg";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-center items-center w-full py-2 space-x-12 whitespace-nowrap pt-4">
-      <Link
-        href="#"
-        className="font-normal text-background hover:text-gray-200 flex items-center gap-x-2 text-sm md:text-base"
-      >
-        <Image
-          src={Plus}
-          alt="Create Icon"
-          width={14}
-          height={14}
-        />
-        <span>
-          Create <span className="text-highlight">ZKvot</span>
-        </span>
-      </Link>
-
+    <div className="flex justify-between items-center w-full py-2 space-x-12 whitespace-nowrap pt-4">
       <Image
         src={Logo}
         alt="ZKvot Logo"
@@ -31,10 +16,16 @@ const NavBar = () => {
       />
 
       <Link
-        href="#"
-        className="font-normal text-green-400 hover:text-green-200 text-sm md:text-base"
+        href="https://github.com/node101-io"
+        target="_blank"
+        className=""
       >
-        Join <span className="text-green">ZKvot</span>
+        <Image
+          src={GitHub}
+          alt="Github"
+          width={30}
+          height={30}
+        />
       </Link>
     </div>
   );

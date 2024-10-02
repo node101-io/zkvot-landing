@@ -8,7 +8,7 @@ import Sequencing from "@/components/Sequencing/Sequencing";
 export default function Home() {
   return (
     <div>
-      <div className="px-4 md:px-24">
+      <div className="px-9">
         <NavBar />
         <IntroSection />
       </div>
