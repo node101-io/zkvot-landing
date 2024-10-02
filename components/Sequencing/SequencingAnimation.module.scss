@@ -1,0 +1,66 @@
+.timeline {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 auto;
+  padding: 0 4rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.lineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.line {
+  width: 4px;
+  transform-origin: bottom;
+  @media (max-width: 768px) {
+    width: 2px;
+  }
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+
+  @media (max-width: 768px) {
+    width: 13px;
+    height: 13px;
+    top: -13px;
+  }
+}
+
+.baseLine {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  height: 4px;
+  border-radius: 100px;
+  background: linear-gradient(
+    to right,
+    #d5a6c4ff,
+    #99c293,
+    #8ed7f8,
+    #f7c1a6,
+    #ffffff
+  );
+  left: 1rem;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 1rem);
+    height: 2px;
+    left: 8px;
+  }
+}
