@@ -8,10 +8,8 @@ import Sequencing from "@/components/Sequencing/Sequencing";
 export default function Home() {
   return (
     <div>
-      <div className="px-9">
-        <NavBar />
-        <IntroSection />
-      </div>
+      <NavBar />
+      <IntroSection />
       <TheChallenge />
       <div className="px-4 xl:px-24">
         <TheSolution />
