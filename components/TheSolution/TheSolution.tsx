@@ -43,11 +43,18 @@ const TheSolution: React.FC = () => {
         <span className="inline-block text-green font-bold text-[18px] sm:text-[20px] leading-[24px] tracking-[2%] rounded-md">
           The Solution
         </span>
-        <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-8">
-          Multiple DA layers
-        </h1>
-        <h1 className="text-[#AFAFAF] font-normal italic text-md sm:text-lg mt-2">
-          100% live communication
+        <span className=" w-full flex flex-row justify-between">
+          <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-8">
+            Multiple DA layers
+          </h1>
+          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2">
+            100% live communication
+          </h1>
+        </span>
+        <h1 className="pt-5 text-[#AFAFAF] text-start font-sans text-xs sm:text-md  md:text-lg  italic font-normal leading-[24px] tracking-[-0.2px] sm:max-w-[512px] max-w-xs">
+          zkVot’s modular design allows it to operate smoothly on a wide range
+          of data layers, providing ultimate flexibility and enabling
+          cross-chain compatibility without any need for modifications.
         </h1>
       </div>
 
