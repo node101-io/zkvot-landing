@@ -4,6 +4,7 @@ import TheChallenge from "@/components/TheChallenge/TheChallenge";
 import TheSolution from "@/components/TheSolution/TheSolution";
 import ZKProofSection from "@/components/ZKProofSection/ZKProofSection";
 import Sequencing from "@/components/Sequencing/Sequencing";
+import ElectionsHexagon from "@/components/ElectionsHexagon/ElectionsHexagon";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <TheSolution />
         <ZKProofSection />
         <Sequencing />
+        <ElectionsHexagon />
       </div>
     </div>
   );
