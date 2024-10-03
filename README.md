@@ -1,1 +1,1 @@
-# zkvot-landing
+# zkVot-landing

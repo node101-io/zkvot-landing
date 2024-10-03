@@ -9,7 +9,7 @@ const NavBar = () => {
     <div className="flex justify-between items-center w-full py-2 space-x-12 whitespace-nowrap pt-4">
       <Image
         src={Logo}
-        alt="ZKvot Logo"
+        alt="zkVot Logo"
         width={80}
         height={20}
         className="md:w-24 md:h-6"

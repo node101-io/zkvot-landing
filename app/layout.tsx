@@ -11,7 +11,7 @@ const atkinson = Atkinson_Hyperlegible({
 });
 
 export const metadata: Metadata = {
-  title: "ZKvote",
+  title: "zkVot",
   description: "A zero-knowledge voting platform",
 };
 
