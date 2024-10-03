@@ -3,8 +3,26 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import CelestiaIcon from "@/assets/celestia.svg";
 import AvailIcon from "@/assets/avail.svg";
-import EigenIcon from "@/assets/eigen.svg";
 import Image from "next/image";
+
+const BallSVG: React.FC = () => {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 6 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="3"
+        cy="3"
+        r="3"
+        fill="#D9D9D9"
+      />
+    </svg>
+  );
+};
 
 const TheSolution: React.FC = () => {
   const sectionRef = useRef(null);
@@ -40,18 +58,18 @@ const TheSolution: React.FC = () => {
   return (
     <div className="h-[40vh] sm:h-[60vh] w-full mb-52">
       <div className="relative z-10 py-4 sm:p-0">
-        <span className="inline-block text-green font-bold text-[18px] sm:text-[20px] leading-[24px] tracking-[2%] rounded-md">
+        <span className="inline-block text-green text-[18px] sm:text-[20px] leading-[24px] tracking-[2%] rounded-md">
           The Solution
         </span>
-        <span className=" w-full flex flex-row justify-between">
-          <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl   mt-4 sm:mt-8">
+        <span className="w-full flex flex-row justify-between">
+          <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl mt-4 sm:mt-8">
             Multiple DA layers
           </h1>
-          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2 text-nowrap">
+          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md md:text-lg mt-2 text-nowrap">
             100% live communication
           </h1>
         </span>
-        <h1 className="pt-5 text-[#AFAFAF] text-start font-sans text-xs sm:text-md  md:text-lg  italic font-normal leading-[24px] tracking-[-0.2px] sm:max-w-[512px] max-w-xs">
+        <h1 className="pt-5 text-[#AFAFAF] text-start font-sans text-xs sm:text-md md:text-lg italic font-normal leading-[24px] tracking-[-0.2px] sm:max-w-[512px] max-w-xs">
           zkVot’s modular design allows it to operate smoothly on a wide range
           of data layers, providing ultimate flexibility and enabling
           cross-chain compatibility without any need for modifications.
@@ -120,32 +138,16 @@ const TheSolution: React.FC = () => {
           </motion.div>
         </div>
 
-        <div className="col-start-2 col-end-4 flex items-center justify-start">
+        <div className="col-start-1 col-end-5 flex items-center justify-center">
           <motion.div
-            className="w-6 h-6"
+            className="flex flex-col items-center space-y-4"
             variants={ballVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <Image
-              src={EigenIcon}
-              alt="Eigen"
-              className="w-full h-full"
-            />
-          </motion.div>
-          <motion.div
-            className="h-[1px] bg-[#D9D9D9]"
-            variants={lineVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          ></motion.div>
-          <motion.div
-            className="text-white -ml-12 sm:-ml-16 -mt-7 sm:-mt-14 text-lg sm:text-2xl"
-            variants={textVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            Eigen
+            <BallSVG />
+            <BallSVG />
+            <BallSVG />
           </motion.div>
         </div>
       </div>
