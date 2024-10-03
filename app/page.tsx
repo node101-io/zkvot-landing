@@ -9,15 +9,20 @@ import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div>
-      <NavBar />
-      <IntroSection />
+    <div className="flex flex-col items-center">
+      <div className="max-w-[1440px] w-full px-2">
+        <NavBar />
+        <IntroSection />
+      </div>
       <TheChallenge />
-      <div className="px-4 xl:px-24">
-        <TheSolution />
-        <ZKProofSection />
-        <Sequencing />
-        <ElectionsHexagon />
+
+      <div className="max-w-[1440px] w-full px-2">
+        <div className="">
+          <TheSolution />
+          <ZKProofSection />
+          <Sequencing />
+          <ElectionsHexagon />
+        </div>
         <Footer />
       </div>
     </div>

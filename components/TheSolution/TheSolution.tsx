@@ -39,12 +39,12 @@ const TheSolution: React.FC = () => {
 
   return (
     <div className="h-[40vh] sm:h-[60vh] w-full mb-52">
-      <div className="relative z-10 p-4 sm:p-0">
+      <div className="relative z-10 py-4 sm:p-0">
         <span className="inline-block text-green font-bold text-[18px] sm:text-[20px] leading-[24px] tracking-[2%] rounded-md">
           The Solution
         </span>
         <span className=" w-full flex flex-row justify-between">
-          <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-8">
+          <h1 className="text-white font-normal text-3xl sm:text-5xl md:text-6xl   mt-4 sm:mt-8">
             Multiple DA layers
           </h1>
           <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2 text-nowrap">

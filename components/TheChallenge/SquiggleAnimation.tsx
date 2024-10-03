@@ -30,12 +30,12 @@ const SquiggleAnimation: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative -top-10 left-0 w-full h-full"
+      className="relative -top-2 left-0 w-full h-full"
     >
       <svg
-        width="1280"
+        width="1440"
         height="403"
-        viewBox="0 0 1280 399"
+        viewBox="0 0 1440 399"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={styles.squiggle}
