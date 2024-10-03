@@ -9,7 +9,7 @@ const ZKProofSection: React.FC = () => {
           <h1 className="max-w-[1220px] text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-6 lg:mt-8 ">
             Efficient ZK Proof generation
           </h1>
-          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2">
+          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md text-nowrap md:text-lg mt-2">
             100% anonymity
           </h1>
         </div>

@@ -4,7 +4,7 @@ import SquiggleAnimation from "./SquiggleAnimation";
 const TheChallenge: React.FC = () => {
   return (
     <div className="relative h-full pb-36 sm:pb-20 w-full overflow-hidden">
-      <div className="relative items-center flex flex-col z-10 w-full px-2">
+      <div className="relative items-center flex flex-col z-10 w-full px-4">
         <div className="max-w-[1440px] w-full">
           <span className="inline-block text-highlight  text-[18px] sm:text-[20px] leading-[24px] tracking-[2%] rounded-md">
             The Challenge

@@ -10,13 +10,13 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <div className="max-w-[1440px] w-full px-2">
+      <div className="max-w-[1440px] w-full px-4">
         <NavBar />
         <IntroSection />
       </div>
       <TheChallenge />
 
-      <div className="max-w-[1440px] w-full px-2">
+      <div className="max-w-[1440px] w-full px-4">
         <div className="">
           <TheSolution />
           <ZKProofSection />
