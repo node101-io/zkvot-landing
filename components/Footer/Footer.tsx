@@ -28,7 +28,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="hello@node101.io"
-              className="text-black mb-5 py-2 px-2 rounded-full focus:outline-none w-full bg-transparent border-[1px] border-white"
+              className="text-white mb-5 py-2 px-2 rounded-full focus:outline-none w-full bg-transparent border-[1px] border-white "
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -50,11 +50,19 @@ const Footer = () => {
           </form>
         </div>
         <div className="w-full lg:w-1/2 flex flex-col text-start md:text-end mb-12 lg:mb-0">
-          <h2 className="text-5xl md:text-6xl">LOREM IPSUM DOLOR</h2>
+          <h2 className="text-5xl md:text-6xl"> CONTACT US TO</h2>
           <h2 className="text-5xl md:text-6xl text-primary italic">
-            IPSUM DOLOR
+            CONTRIBUTE
           </h2>
-          <p className="text-gray-400 mt-4">hello@node101.io</p>
+
+          <div className="text-gray-400 mt-4">
+            <a
+              className="w-fit"
+              href="mailto:hello@node101.io"
+            >
+              hello@node101.io
+            </a>
+          </div>
         </div>
       </div>
 

@@ -7,10 +7,10 @@ const ElectionsHexagon: React.FC = () => {
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
           <h1 className="max-w-[1220px] text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-6 lg:mt-8 ">
-            Lorem Ipsum Dolor
+            Scalable Future of Secure Voting
           </h1>
-          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2">
-            100% provable settlement
+          <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2 text-nowrap">
+            100% adaptive
           </h1>
         </div>
         <h1 className="pt-5 text-[#AFAFAF] text-start font-sans text-xs sm:text-md  md:text-lg  italic font-normal leading-[24px] tracking-[-0.2px] sm:max-w-[512px] max-w-xs">

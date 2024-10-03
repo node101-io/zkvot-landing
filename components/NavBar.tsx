@@ -16,7 +16,7 @@ const NavBar = () => {
       />
 
       <Link
-        href="https://github.com/node101-io"
+        href="https://github.com/node101-io/zkvot"
         target="_blank"
         className=""
       >

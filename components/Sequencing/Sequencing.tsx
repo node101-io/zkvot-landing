@@ -52,7 +52,7 @@ const SequencingSection: React.FC = () => {
       <div className="flex flex-col">
         <div className="flex flex-row justify-between">
           <h1 className="max-w-[1220px] text-white font-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-4 sm:mt-6 lg:mt-8 ">
-            ZKvot decentralized sequencing layer
+            ZKvot decentralized aggregating layer
           </h1>
           <h1 className="text-[#AFAFAF] font-normal italic text-xs sm:text-md  md:text-lg mt-2 text-nowrap">
             100% provable settlement

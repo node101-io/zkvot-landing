@@ -31,7 +31,9 @@ const IntroSection = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12">
           <Button href="/zkVotProtocol.pdf">
             Read First Version of
-            <span className="text-primary group-hover:text-black">Article</span>
+            <span className="text-primary group-hover:text-black ml-1">
+              Article
+            </span>
           </Button>
         </div>
       </div>
