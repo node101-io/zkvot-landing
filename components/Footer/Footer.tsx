@@ -18,8 +18,7 @@ const Footer = () => {
         <div className="w-full max-w-[410px] flex flex-col items-start text-strat">
           <h2 className="text-3xl mb-2">Be notified when it's ready.</h2>
           <p className="text-[#B7B7B7] mb-6">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            We will let you know when it's ready to use for everyone.
           </p>
           <form
             onSubmit={handleSubmit}
