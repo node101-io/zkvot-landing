@@ -1,7 +1,5 @@
 import React from "react";
-
 import { useTranslations } from "next-intl";
-
 import Button from "./Common/Button";
 import Link from "next/link";
 
@@ -9,15 +7,15 @@ const IntroSection = () => {
   const t = useTranslations("IntroSection");
 
   return (
-    <div className="h-[95vh] w-full flex flex-col justify-center items-center text-center text-white  ">
-      <h1 className=" pb-4 text-[24px] text-highlight">Available Soon</h1>
-      <div className="max-w-[850px]">
+    <div className="h-[95vh] w-full flex flex-col justify-center items-center text-white">
+      <h1 className="pb-4 text-[24px] text-highlight">Available Soon</h1>
+      <div className="max-w-[850px] text-left sm:text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] mb-2 leading-tight">
           EMPOWERING <span className="italic">PRIVACY</span> &{" "}
           <span className="italic">DECENTRALIZATION</span> IN{" "}
           <span className="text-primary">VOTING</span> ONCE AND FOR ALL
         </h1>
-        <p className="text-green italic text-end pb-5">
+        <p className="text-green italic text-start sm:text-end pb-5">
           developed and designed by{" "}
           <Link
             target="_blank"
