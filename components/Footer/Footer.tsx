@@ -1,15 +1,70 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Logo from "@/assets/logo.svg";
 import RightArrow from "@/assets/RightArrow";
 import Image from "next/image";
 
+const debounce = (func: Function, delay: number) => {
+  let timerId: NodeJS.Timeout;
+  return (...args: any[]) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeyPot, setHoneyPot] = useState("");
+
+  const debouncedSubmit = useCallback(
+    debounce(async (email: string) => {
+      try {
+        const response = await fetch("/api/subscribe", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+          setMessage("Thank you for subscribing! ");
+          setEmail("");
+          setShowModal(true);
+        } else {
+          const data = await response.json();
+          setMessage(data.message || "Failed to subscribe. Please try again.");
+          setShowModal(true);
+        }
+      } catch (error) {
+        console.error("Error submitting email:", error);
+        setMessage("An error occurred. Please try again.");
+        setShowModal(true);
+      }
+
+      setIsSubmitting(false);
+    }, 1000),
+    []
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Email submitted:", email);
+
+    if (isSubmitting) return;
+
+    if (honeyPot) {
+      setMessage("Spam detected. Please try again.");
+      setShowModal(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+    debouncedSubmit(email);
   };
 
   return (
@@ -26,15 +81,23 @@ const Footer = () => {
             className="flex flex-col items-center lg:items-end w-full"
           >
             <input
+              type="text"
+              value={honeyPot}
+              onChange={(e) => setHoneyPot(e.target.value)}
+              className="hidden"
+              aria-hidden="true"
+            />
+            <input
               type="email"
               placeholder="hello@node101.io"
-              className="text-white mb-5 py-2 px-2 rounded-full focus:outline-none w-full bg-transparent border-[1px] border-white "
+              className="text-white mb-5 py-2 px-2 rounded-full focus:outline-none w-full bg-transparent border-[1px] border-white"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <div className="w-full flex items-start">
               <button
+                disabled={isSubmitting}
                 type="submit"
                 className="group relative inline-flex items-center px-4 py-2 rounded-full bg-transparent text-primary font-medium overflow-hidden transition-all duration-300 ease-in-out"
               >
@@ -86,6 +149,19 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-[#121212] text-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl font-semibold">{message}</h2>
+            <button
+              className="mt-4 px-4 py-2 bg-white text-black rounded-lg"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };
