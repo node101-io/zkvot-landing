@@ -1,5 +1,19 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import clientPromise from "@/lib/mongodb";
+import mongoose from "mongoose";
+
+mongoose.set('strictQuery', false);
+
+if (mongoose.connection.readyState === 0) {
+  mongoose.connect(process.env.MONGODB_URI || "", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+}
+
+const Subscriber = mongoose.models.Subscriber || mongoose.model(
+  "Subscriber",
+  new mongoose.Schema({}, { strict: false })
+);
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,22 +23,18 @@ export default async function handler(
     try {
       const { email } = req.body;
 
-      const client = await clientPromise;
-      const db = client.db("myDatabase");
+      if (!email)
+        return res.status(400).json({ message: "Email is required" });
 
-      const existingEmail = await db
-        .collection("subscriptions")
-        .findOne({ email });
-      if (existingEmail) {
-        return res
-          .status(400)
-          .json({ message: "Email is already subscribed." });
-      }
+      const subscription = new Subscriber({
+        key: `zkvot-${email}`,
+        email: email,
+        type: 'zkvot'
+      });
 
-      const result = await db.collection("subscriptions").insertOne({ email });
-      return res
-        .status(201)
-        .json({ message: "Subscription successful", data: result });
+      await subscription.save();
+
+      return res.status(201).json({ message: "Subscriber added" });
     } catch (error) {
       console.error("Error adding subscription:", error);
       return res.status(500).json({ message: "Internal server error" });
