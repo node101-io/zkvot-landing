@@ -4,10 +4,7 @@ import mongoose from "mongoose";
 mongoose.set('strictQuery', false);
 
 if (mongoose.connection.readyState === 0) {
-  mongoose.connect(process.env.MONGODB_URI || "", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(process.env.MONGODB_URI || "");
 }
 
 const Subscriber = mongoose.models.Subscriber || mongoose.model(
