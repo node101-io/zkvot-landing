@@ -29,7 +29,7 @@ const IntroSection = () => {
           {t("description")}
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12">
-          <Button href="/zkVotProtocol.pdf">
+          <Button href="/article.pdf">
             Read First Version of
             <span className="text-primary group-hover:text-black ml-1">
               Article
