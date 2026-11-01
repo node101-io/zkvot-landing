@@ -1,0 +1,9 @@
+{
+  // Static assets only: `npm run build` exports the site to out/.
+  "name": "zkvot-landing",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
