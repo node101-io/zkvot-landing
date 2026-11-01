@@ -5,5 +5,10 @@
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  // Custom domains: wrangler creates their DNS records on deploy.
+  "routes": [
+    { "pattern": "zkvot.io", "custom_domain": true },
+    { "pattern": "www.zkvot.io", "custom_domain": true }
+  ]
 }
